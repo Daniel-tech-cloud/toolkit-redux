@@ -1,9 +1,10 @@
-import { useState } from 'react'
+
 import './App.css'
+import { useSelector } from 'react-redux'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const { counter } = useSelector( state => state.counter )
+  
   return (
     <>
       <div>
@@ -12,8 +13,8 @@ function App() {
 
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={ ()=>{} }>
+          count is { counter }
         </button>
       </div>
     </>
